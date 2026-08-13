@@ -3,10 +3,10 @@
 [![Active Directory](https://img.shields.io/badge/Active%20Directory-CORP.LOCAL-blue.svg)](docs/architecture.md)
 [![SIEM](https://img.shields.io/badge/SIEM-Wazuh%204.7-orange.svg)](docs/architecture.md)
 [![Telemetry](https://img.shields.io/badge/Telemetry-Sysmon%20v15-brightgreen.svg)](docs/architecture.md)
-[![Framework](https://img.shields.io/badge/Framework-NIST%20SP%20800--61-red.svg)](docs/detection_use_cases.md)
-[![ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-v14-purple.svg)](docs/detection_use_cases.md)
+[![Framework](https://img.shields.io/badge/Framework-NIST%20SP%20800--61%20mapped-red.svg)](docs/detection_use_cases.md)
+[![ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-mapped-purple.svg)](docs/detection_use_cases.md)
 [![Subnets](https://img.shields.io/badge/Network-5--VLAN%20Isolated-blueviolet.svg)](docs/topology.md)
-[![Coverage](https://img.shields.io/badge/Coverage-100%25%20Verified-success.svg)](tests/validate_blueprint.ps1)
+[![Documentation checks](https://img.shields.io/badge/docs%20checks-29%2F29-success.svg)](tests/validate_blueprint.ps1)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ---
@@ -15,7 +15,7 @@
 
 > **Targeting Roles**: **SOC Tier 1 Analyst**, **Cybersecurity Engineer**, **IAM Administrator**, **Systems / Infrastructure Engineer**.
 
-Welcome! This repository documents a production-grade enterprise SOC blue-team home lab (`CORP.LOCAL`). Designed to demonstrate real-world security engineering, Active Directory hardening, SIEM log pipeline construction, and NIST-aligned incident response workflows.
+Welcome! This repository documents a proposed enterprise-simulated SOC blue-team home-lab blueprint (`CORP.LOCAL`). It is a reproducible reference design—not evidence of a currently provisioned environment—for Active Directory hardening, SIEM telemetry, and mapped incident-response exercises.
 
 ### Core Engineering Highlights
 - **Active Directory Architecture (`CORP.LOCAL`)**: Multi-tiered domain hierarchy with 5 dedicated OUs (`Executive`, `IT`, `Finance`, `Workstations`, `Servers`), GPO baseline enforcement, Microsoft LAPS deployment, and NTLMv1/SMBv1 deprecation.
@@ -94,8 +94,8 @@ home-lab-blue-team/
 ## Verification & Compliance Alignment
 
 All architectural components have been validated against industry cybersecurity standards:
-- **NIST SP 800-61 Rev 2**: Computer Security Incident Handling Guide (all 4 phases verified).
-- **MITRE ATT&CK v14**: Technique mapping across Credential Access, Defense Evasion, and Lateral Movement.
+- **NIST SP 800-61 Rev. 2**: Legacy four-phase exercise structure; Rev. 3 is current guidance.
+- **MITRE ATT&CK**: Technique mappings across Credential Access, Defense Evasion, and Lateral Movement.
 - **CIS Controls v8**: Controls 4 (Secure Configuration), 5 (Account Management), 6 (Access Control Management), and 8 (Audit Log Management).
 
 To execute the automated verification test suite:
