@@ -1,0 +1,18 @@
+name: Validate blueprint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate required architecture and detection content
+        shell: pwsh
+        run: ./tests/validate_blueprint.ps1
